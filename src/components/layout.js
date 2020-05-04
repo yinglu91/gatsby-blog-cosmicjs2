@@ -30,7 +30,7 @@ const getData = graphql`
   }
 `
 
-export default ({ children, location }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(getData)
 
   const siteTitle = data.cosmicjsSettings.metadata.site_heading
@@ -172,3 +172,5 @@ export default ({ children, location }) => {
     </div>
   )
 }
+
+export default Layout
